@@ -60,6 +60,10 @@ app.get("/", (request, response, next) => {
   return response.render("index");
 });
 
+app.get(["/faq", "/faq.html"], (request, response, next) => {
+  return response.render("faq");
+});
+
 app.get(["/privacy", "/privacy.html"], (request, response, next) => {
   return response.render("privacy");
 });
