@@ -2,8 +2,8 @@
 require("./config/environment.js");
 
 // Shared
-const AppError = require("./error.js");
-const Logger = require("./logger.js");
+const AppError = require("shared/error");
+const Logger = require("shared/logger");
 
 // Constants
 const DOMAIN = process.env.DOMAIN;

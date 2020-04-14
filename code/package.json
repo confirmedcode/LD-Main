@@ -18,6 +18,7 @@
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "express-winston": "^3.0.0",
+    "shared": "file:../../shared",
     "helmet": "^3.13.0",
     "winston": "^3.2.1"
   },

@@ -14,6 +14,8 @@ phases:
       - echo Installing source NPM dependencies...
       - mkdir -p logs
       - cd code
+      - echo Installing shared with the right region...
+      - "npm install --save git+https://git-codecommit.$AWS_REGION.amazonaws.com/v1/repos/$ENVIRONMENT-Shared#$GIT_BRANCH"
       - npm install
   build:
     commands:

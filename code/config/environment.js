@@ -1,6 +1,11 @@
-const Logger = require("../logger");
+const Logger = require("shared/logger");
 
 // Load environment variables
-require("../environment")([
-  "COMMON"
+require("shared/environment")([
+  "COMMON",
+  "MAIN"
 ]);
+
+// Load database login
+process.env.PG_USER = "main";
+process.env.PG_PASSWORD = process.env.PG_MAIN_PASSWORD;
