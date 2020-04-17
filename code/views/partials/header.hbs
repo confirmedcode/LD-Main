@@ -1,22 +1,40 @@
 <head>
-  <title>{{title}}</title>
+  <title>{{title}} - Lockdown Apps</title>
   
 	<meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  {{#if description }}
+  <meta name="description" content="{{description}}">
+  {{else}}
   <meta name="description" content="The simple, powerful firewall that blocks tracking, ads, badware and more.">
+  {{/if}}
+  {{#if author }}
+  <meta name="author" content="{{author}}">
+  {{else}}
   <meta name="author" content="Confirmed Inc.">
+  {{/if}}
 
 	<meta property="og:type" content="product">
-	<meta property="og:title" content="Lockdown: The Free, Open Source Firewall">
-	<meta property="og:description" content="The simple powerful firewall that blocks tracking, ads, badware and more.">
+  {{#if title }}
+	<meta property="og:title" content="{{title}} - Lockdown Apps">
+  {{ else }}
+  <meta property="og:title" content="Lockdown Apps">
+  {{/if}}
+  {{#if description }}
+	<meta property="og:description" content="{{description}}">
+  {{ else }}
+	<meta property="og:description" content="The simple, powerful firewall that blocks tracking, ads, badware and more.">
+  {{/if}}
+  
 	<meta property="og:url" content="https://lockdownhq.com">
-  <meta property="og:image" content="https://lockdownhq.com/images/preview.jpg">
+  <meta property="og:image" content="{{S3_BUCKET}}/images/preview.jpg">
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
-  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/css/lockdown.css">
-  <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{{S3_BUCKET}}/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{S3_BUCKET}}/css/lockdown.css">
+  <link rel="stylesheet" type="text/css" href="{{S3_BUCKET}}/css/font-awesome.min.css">
   
 </head>

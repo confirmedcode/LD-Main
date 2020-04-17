@@ -49,6 +49,9 @@ app.engine(".hbs", require("express-handlebars")({
 }));
 app.set("view engine", ".hbs");
 app.locals.DOMAIN = DOMAIN;
+//if (NODE_ENV === "production") {
+  app.locals.S3_BUCKET = "https://lockdown-site-assets.s3.amazonaws.com";
+//}
 app.use(express.static("public"));
 
 if (NODE_ENV === "production") {
@@ -58,6 +61,18 @@ if (NODE_ENV === "production") {
 // Landing Page
 app.get("/", (request, response, next) => {
   return response.render("index");
+});
+
+app.get(["/reviews"], (request, response, next) => {
+  return response.render("reviews");
+});
+
+
+app.get(["/review/houseparty", "/houseparty"], (request, response, next) => {
+  return response.render("reviewwrap", {
+    reviewtitle: "Privacy Review: Houseparty",
+    reviewimage: "/images/houseparty-report.png"
+  });
 });
 
 app.get(["/faq", "/faq.html"], (request, response, next) => {

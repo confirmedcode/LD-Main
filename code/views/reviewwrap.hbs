@@ -1,0 +1,30 @@
+{{> header title=reviewtitle metaimg=reviewimage }}
+  
+<body class="text-center bg-white">
+  
+  {{> nav }}
+
+  <div class="container px-0">
+    <nav class="mt-3">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/reviews">Privacy Reviews</a></li>
+        <li class="breadcrumb-item active">Houseparty</li>
+      </ol>
+    </nav>
+  </div>
+ 
+  <div class="container bg-white">
+
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 mb-5">
+        {{> review }}
+      </div>
+    </div>
+    
+  </div>
+  
+  {{> footer }}
+  
+</body>
+
+{{> bootstrapjs}}
