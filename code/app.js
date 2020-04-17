@@ -70,7 +70,8 @@ app.get("/", (request, response, next) => {
 app.get(["/review/houseparty", "/houseparty"], (request, response, next) => {
   return response.render("reviewwrap", {
     reviewtitle: "Privacy Review: Houseparty",
-    reviewimage: "/images/houseparty-report.png"
+    reviewimage: app.locals.S3_BUCKET + "/images/houseparty-report.png",
+    reviewdescription: "Houseparty is the #1 downloaded Social Networking app. Read its Privacy Review to see what tracking it's doing with marketing and analytics companies."
   });
 });
 

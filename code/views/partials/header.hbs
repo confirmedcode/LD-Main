@@ -13,7 +13,7 @@
   {{#if author }}
   <meta name="author" content="{{author}}">
   {{else}}
-  <meta name="author" content="Confirmed Inc.">
+  <meta name="author" content="Lockdown Apps">
   {{/if}}
 
 	<meta property="og:type" content="product">
@@ -27,10 +27,32 @@
   {{ else }}
 	<meta property="og:description" content="The simple, powerful firewall that blocks tracking, ads, badware and more.">
   {{/if}}
-  
 	<meta property="og:url" content="https://lockdownhq.com">
-  <meta property="og:image" content="{{S3_BUCKET}}/images/preview.jpg">
-
+  {{#if metaimg }}
+	<meta property="og:image" content="{{metaimg}}">
+  {{ else }}
+	<meta property="og:image" content="{{S3_BUCKET}}/images/preview.jpg">
+  {{/if}}
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@lockdown_hq">
+  <meta name="twitter:creator" content="@lockdown_hq">
+  {{#if title }}
+	<meta property="twitter:title" content="{{title}} - Lockdown Apps">
+  {{ else }}
+  <meta property="twitter:title" content="Lockdown Apps">
+  {{/if}}
+  {{#if description }}
+	<meta property="twitter:description" content="{{description}}">
+  {{ else }}
+	<meta property="twitter:description" content="The simple, powerful firewall that blocks tracking, ads, badware and more.">
+  {{/if}}
+  {{#if metaimg }}
+	<meta property="twitter:image" content="{{metaimg}}">
+  {{ else }}
+	<meta property="twitter:image" content="{{S3_BUCKET}}/images/preview.jpg">
+  {{/if}}
+  
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" type="text/css" href="{{S3_BUCKET}}/css/bootstrap.min.css">
