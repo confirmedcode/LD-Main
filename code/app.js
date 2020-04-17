@@ -63,10 +63,9 @@ app.get("/", (request, response, next) => {
   return response.render("index");
 });
 
-app.get(["/reviews"], (request, response, next) => {
-  return response.render("reviews");
-});
-
+// app.get(["/reviews"], (request, response, next) => {
+//   return response.render("reviews");
+// });
 
 app.get(["/review/houseparty", "/houseparty"], (request, response, next) => {
   return response.render("reviewwrap", {

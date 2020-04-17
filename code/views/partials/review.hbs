@@ -1,4 +1,4 @@
-<div class="text-left pb-3 pt-4">
+<div class="text-left pb-3 pt-2">
   <a href="/review/houseparty"><h3 class="mt-3 pb-0 mb-0">Privacy Review: Houseparty</h3></a>
   <div class="text-muted mb-2 mt-2">April 15th, 2020 by Johnny Lin - <a href="/review/houseparty">Permalink</a></div>
 </div>
@@ -7,6 +7,9 @@
 
 <p>Popular apps are often secretly sending personal data to marketing companies, or including invasive third-party trackers, or abusing permissions that they're granted, even in the background.</p>
 <p>In our <strong>Privacy Reviews</strong> series, we dissect one app per review and tell you which third-party trackers it's using, what the trackers do, and what data they collect. We use the <a href="lockdownhq.com" target="_blank">Lockdown</a> app to automatically expose and block these behaviors.</p>
+
+<p>For our first review, we chose the video chat app <strong>Houseparty</strong> due to its popularity, boosted by recent mandatory stay-at-home orders. Even though the app is free for its users, how much is the marketing data and tracking of 50+ million teens and young adults worth? We begin with a summary card, and delve into details below.
+</p>
 
 <div class="pt-2">
 
@@ -18,7 +21,7 @@
 
 </div>
 
-<div class="pt-4 mt-2">
+<div class="pt-5 mt-2">
 
   <h4 class="heading pb-1"><strong>What is this app?</strong></h4>
   
@@ -42,7 +45,7 @@
 
 </div>
 
-<div class="pt-4 mt-2">
+<div class="pt-5 mt-2">
 
   <h4 class="heading pb-1"><strong>What user data and permissions does this app require?</strong></h4>
   
@@ -69,7 +72,7 @@
   
 </div>
 
-<div class="pt-4 mt-2">
+<div class="pt-5 mt-2">
 
   <h4 class="heading pb-1"><strong>Which trackers are used, and what do they collect?</strong></h4>
   
@@ -113,7 +116,7 @@
   
 </div>
 
-<div class="pt-4 mt-2">
+<div class="pt-5 mt-2">
 
   <h4 class="heading pb-1"><strong>How frequently are trackers contacted?</strong></h4>
   
@@ -122,25 +125,37 @@
       <img src="{{S3_BUCKET}}/images/houseparty.gif" class="img-fluid rounded" style="max-height: 110px; min-height: 360px;">
     </div>
     <div class="col-md-8 pt-4">
-      Lockdown recorded and blocked <strong>214 tracking attempts</strong> in our five minutes of using Houseparty. This included app installation, initial launch, signup, and a ten second videochat.<br/><br/>Every time Houseparty was opened again, Lockdown logged 36 more tracking attempts. We detected no background tracking, but we only used the app for about an hour.<br/><br/>To ensure that these tracking attempts only came from Houseparty, we tested with an iPhone that was factory reset before the test, with no other apps installed.
+      <p>
+      Lockdown recorded and blocked <strong>214 tracking attempts</strong> to third-parties in our five minutes of using Houseparty. This included app installation, initial launch, signup, and a ten second videochat.
+      </p>
+      <p>
+      Every time Houseparty was opened again, Lockdown logged 36 more tracking attempts to at least three different third-party trackers.
+      </p>
+      <p>
+      We detected no background tracking, but we only monitored the app for about an hour total.
+      </p>
     </div>
     
   </div>
   
 </div>
 
-<div class="pt-4 mt-2">
+<div class="pt-5 mt-2">
 
   <h4 class="heading pb-1"><strong>Conclusion</strong></h4>
   
   <div class="row ml-4 mr-2 pb-3 bg-light rounded">
     <div class="col-md-9 text-left py-2 pt-4">
       <p>
-      <strong>Houseparty gets a Privacy Grade of C+.</strong>
+      <strong>Houseparty gets a Privacy Grade of C+.</strong> While we can't certain exactly what Houseparty is sending to third parties, we know at the very least, every app activation and user action, along with unique identifiers are being sent for unknown processing. That totals to hundreds of data points per user (per day), multiplied by over 50 million users (and growing), multiplied by the number of different marketing and tracking companies involved.
       </p>
-      <p>While we can't be 100% sure of what exactly Houseparty is sending to third party marketing and analytics companies, at the very least, every app activation, user action, and unique identifiers are being sent for unknown processing. Note that we did not use Houseparty's "Connect To Facebook" feature. Had we done so, we would have likely tripped more of Lockdown's Facebook Tracker blocking.</p>
+      <p>During our testing, we did not use Houseparty's "Connect To Facebook" feature. Had we done so, we would have likely logged Facebook Tracker blocking in addition to the other third parties above.
+      </p>
       <p>
-      If you have the free <strong><a href="https://lockdownhq.com">Lockdown</a></strong> app installed, you are automatically protected against the trackers and privacy intrusions described above. This test was conducted using Lockdown v0.3.6, and with the "Marketing (Beta)" Block List set to "Blocked".
+      If you have the free <strong><a href="https://lockdownhq.com">Lockdown</a></strong> app installed, you're automatically protected against the trackers and privacy intrusions described above. This test was conducted using version 0.3.6, and with the "Marketing (Beta)" Block List set to "Blocked".
+      </p>
+      <p>
+      Please share this Privacy Review if you found it useful. Send us feedback, questions, or even request an app's Privacy Review at <a href="mailto:team@lockdownhq.com?subject=Privacy Review Feedback">team@lockdownhq.com</a>. If you're press or media, you have permission to use the research/content above, provided that you attribute and link back to this review.
       </p>
     </div>
     <div class="col-md-3 pt-4 text-center">
