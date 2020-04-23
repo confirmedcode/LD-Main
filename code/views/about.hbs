@@ -1,0 +1,97 @@
+{{> header title="FAQ" }}
+  
+<body class="text-center" style="background-color:white;">
+  
+  {{> nav }}
+ 
+  <div class="container">
+    
+      <div class="row">
+        <div class="col-12">
+          <h4 class="text-center serif mb-4 pb-2 mt-0 pt-5"><strong>About Us</strong></h4>
+        </div>
+      </div>
+
+      <div class="row mt-2 text-left">
+      
+        <div class="col-lg-10 offset-lg-1 mt-0">
+          <h3 class="text-center">Lockdown's mission is to make apps do exactly what they say they do, and nothing else.</h3>
+          <h3 class="mt-5">Origin</h3>
+          <p class="mt-2 mb-2">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Before making Lockdown, we made other apps that were fairly popular in the App Store, so we were frequently approached by companies for potential partnerships.<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One day, a company sent us an interesting proposal: "You could make $X,000 a month by doing nothing," they wrote, "just add this little piece of code and we'll handle the rest."<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It sounded too good to be true, but we were curious and had to find out more. We learned that the company that approached us was a data-mining company, and the "little piece of code" would secretly report a user's location, IP address, and usage patterns to their servers. Their business model was that they would then sell that user data to another third party, which could have been literally anyone: advertising firms, marketing companies, hostile state actors &mdash; who knows? Basically, they were asking us to secretly sell out our users.<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We politely declined their offer, and instead did more research to discover that there were many, many data-mining companies cropping up to do exactly the same thing as them. We were fortunate enough to be able to reject their money, but what about other companies? It turns out, <a href="https://thenextweb.com/apps/2019/01/05/weather-apps-are-secretly-selling-your-location-data-to-the-highest-bidder/" target=_blank>a <i>lot</i> of companies</a> took the money &mdash; many top downloaded apps were were selling user data to the highest bidder.<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So we did what we felt was the right thing, and really the only thing we could do as engineers: we built an app to fight back against the tracking. Since the tracking was happening in apps and not just the browser, normal adblockers wouldn't block them. Our solution was Lockdown, which blocks tracking, ads, and badware in <i>all apps</i>, not just the browser. Fast forward to today, over 100,000 people have used Lockdown to block over a billion tracking attempts &mdash; and we're just getting started.<br/>
+          </p>
+        </div>
+      
+        <div class="col-lg-10 offset-lg-1 mt-3">
+          <h3 class="mt-3">Why Lockdown Is Superior</h3>
+          <p>
+            <ol>
+              <li>
+                Lockdown is <strong>open source</strong>. This means that anyone can see exactly what it's doing, and more importantly what it's *not* doing. All the major security and privacy products (even "name brand" security products, and especially products that you see a bunch of ads for) are closed source, which means what they're doing is totally secret. As a result, they're able to secretly sell your data to the highest bidder. With closed source products, you could end up paying for a security product that annihilates your privacy, and there's no way for them to prove otherwise. Here's just a few examples:
+                  <ul>
+                    <li>
+                      <a href="https://www.theverge.com/2020/1/27/21083809/avast-avg-jumpshot-antivirus-data-tracking-all-clicks" target="_blank">Name brand antivirus company secretly tracking everything their users are doing online</a>
+                    </li>
+                    <li>
+                      <a href="https://techcrunch.com/2019/02/21/facebook-removes-onavo/" target="_blank">Popular VPN apps revealed to be spyware created by Facebook</a>
+                    </li>
+                    <li>
+                      <a href="https://www.computerweekly.com/news/252466203/Top-VPNs-secretly-owned-by-Chinese-firms" target="_blank">Security products secretly owned by Chinese firms
+                      </a>
+                    </li>
+                  </ul>
+              </li>
+              <li class="mt-2">
+                Unlike many major privacy product companies, Lockdown <strong>does not use invasive ad tracking</strong>.
+                <br/>
+                Have you ever seen an ad for a "name brand" security product? Isn't it ironic that supposed privacy are spending big bucks on invasive tracking/advertisement networks that they're supposed to be protecting users from? What does this say about their true attitude toward tracking?
+                <br/>
+                Lockdown does not buy Facebook ads, or ads of any kind, because we understand that that's the privacy-invading system we're trying to dismantle. We rely mostly on word of mouth, the quality of our product, and unsponsored journalism to spread our product to users. Note that for many so-called product "reviews" out there (even for respected places like PC Magazine), they're actually using sponsored links in order to make money off of their reviews - distorting their incentive to tell the truth. Lockdown never does this.
+                <br/>
+              </li>
+              <li class="mt-2">
+                Lockdown is the world's first <strong>openly operated</strong> product, meaning that it's the most transparent a product can possibly be: everything from company ownership and location, to full third party audits, to proving its Privacy Policy.
+                <br/>
+                We created the <a href="https://openlyoperated.org" target="_blank">Openly Operated</a> transparency standard because we saw that companies were basically outright lying in their Privacy Policies. Of course, many companies are closed source or headquartered offshore, so they're usually not caught. However, even with companies that were actually caught, there would rarely be any kind of penalties. Openly Operated is a way to force companies to provide *proof* of their transparency, rather than just asserting them. You can read about why we launched Openly Operated <a href="https://openlyoperated.org/blog" target="_blank">here</a>, and you can see Lockdown's full transparency report <a href="https://openlyoperated.org/report/confirmedvpn" target="_blank">here</a>.
+                <br/>
+              </li>
+            </ol>
+          </p>
+        </div>
+      
+        <div class="col-lg-10 offset-lg-1 mt-3">
+          <h3 class="mt-4 mb-4">Team</h3>
+        </div>
+      
+        <div class="col-lg-5 offset-lg-1 text-center mt-0 mb-3">
+          <img src="{{S3_BUCKET}}/images/johnny.jpg" style="width:100%; max-width: 200px; border-radius: 100px;">
+          <h5 class="mt-3"><strong>Johnny Lin</strong></h5>
+          <h5>Co-Founder</h5>
+          <a href="mailto:johnny@lockdownhq.com">johnny@lockdownhq.com</a>
+        </div>
+      
+        <div class="col-lg-5 text-center mt-0">
+          <img src="{{S3_BUCKET}}/images/rahul.jpg" style="width:100%; max-width: 200px; border-radius: 100px;">
+          <h5 class="mt-3"><strong>Rahul Dewan</strong></h5>
+          <h5>Co-Founder</h5>
+          <a href="mailto:rahul@lockdownhq.com">rahul@lockdownhq.com</a>
+        </div>
+      
+        <div class="col-lg-10 offset-lg-1 mt-5 mb-5 text-center">
+          <h3 class="mt-1">We're Hiring Engineers!</h3>
+          <p>We have really, really exciting products in the pipeline &mdash; remote work is welcome.<br/>Send a short blurb about yourself to <a href="mailto:work@lockdownhq.com">work@lockdownhq.com</a>.</p>
+        </div>
+      
+      </div>
+    
+    </div>
+  
+  {{> footer }}
+  
+</body>
+
+{{> bootstrapjs}}

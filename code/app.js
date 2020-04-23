@@ -75,6 +75,10 @@ app.get(["/review/houseparty", "/houseparty"], (request, response, next) => {
   });
 });
 
+app.get(["/about", "/about.html"], (request, response, next) => {
+  return response.render("about");
+});
+
 app.get(["/faq", "/faq.html"], (request, response, next) => {
   return response.render("faq");
 });
