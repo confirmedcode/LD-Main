@@ -76,7 +76,9 @@ app.get(["/review/houseparty", "/houseparty"], (request, response, next) => {
 });
 
 app.get(["/about", "/about.html"], (request, response, next) => {
-  return response.render("about");
+  return response.render("about", {
+    trackerimage: app.locals.S3_BUCKET + "/images/tracker-diagram.png"
+  });
 });
 
 app.get(["/faq", "/faq.html"], (request, response, next) => {
