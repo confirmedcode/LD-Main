@@ -6,7 +6,7 @@ const AppError = require("shared/error");
 const Logger = require("shared/logger");
 
 // Constants
-const DOMAIN = process.env.DOMAIN;
+const DOMAIN = process.env.LD_DOMAIN;
 const NODE_ENV = process.env.NODE_ENV;
 const ENVIRONMENT = process.env.ENVIRONMENT;
 
@@ -49,9 +49,12 @@ app.engine(".hbs", require("express-handlebars")({
 }));
 app.set("view engine", ".hbs");
 app.locals.DOMAIN = DOMAIN;
-//if (NODE_ENV === "production") {
+if (NODE_ENV === "production") {
   app.locals.S3_BUCKET = "https://lockdown-site-assets.s3.amazonaws.com";
-//}
+}
+else {
+  app.locals.S3_BUCKET = "/local-assets"
+}
 app.use(express.static("public"));
 
 if (NODE_ENV === "production") {

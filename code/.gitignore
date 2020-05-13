@@ -1,3 +1,6 @@
+# S3 Mirror
+public/local-assets/
+
 # Logs
 logs
 *.log
