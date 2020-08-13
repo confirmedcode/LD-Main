@@ -84,6 +84,10 @@ app.get(["/faq", "/faq.html"], (request, response, next) => {
   return response.render("faq");
 });
 
+app.get(["/secure-tunnel"], (request, response, next) => {
+  return response.render("securetunnel");
+});
+
 app.get(["/privacy", "/privacy.html"], (request, response, next) => {
   return response.render("privacy");
 });

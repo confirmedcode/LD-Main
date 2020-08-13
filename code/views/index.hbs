@@ -32,27 +32,6 @@
     </div>
   </div>
   
-  <!-- 
-  <div class="container-fluid bg-light mb-5 pt-3 pb-1">
-    <div class="container mb-4 pt-3">
-      <div class="row">
-        <div class="col-lg-4 px-5">
-          <h5 class="font-weight-bold">Simple</h5>
-          <p>Incredibly easy to use - just tap a button and trackers are blocked.</p>
-        </div>
-        <div class="col-lg-4">
-          <h5 class="font-weight-bold">Powerful</h5>
-          <p>Customize blocking using preset lists, or add your own trackers to block.</p>
-        </div>
-        <div class="col-lg-4">
-          <h5 class="font-weight-bold">Open</h5>
-          <p>Open source and on-device Firewall to maximize privacy and security.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  -->
-
   <div class="container-fluid bg-light">
     <div class="container pt-4 pb-3">
       <div class="row">
@@ -97,28 +76,80 @@
     </div>
   </div>
   
-  <div class="container mt-5 pb-5">
+  <div class="container mt-5 pb-0">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 mb-2 mt-2 px-5">
+        <h3><strong>Comprehensive Privacy Protection</strong></h3>
+        <h5 class="text-muted pb-3 text-left">Lockdown has two privacy features: <strong>Firewall</strong> and <strong>Secure Tunnel VPN</strong>. Each feature protects you from different threats, creating the complete solution for protecting your personal data, browsing history, and sensitive connections.</h5>
+      </div>
+      <div class="col-lg-10 offset-lg-1 mb-3 mt-2 px-5">
         <div class="row">
-          <div class="col-12 mb-3 mt-2 px-5">
-            <h3 class="text-muted"><strong>Over 1 Billion Trackers Blocked</strong></h3>
-            <h5 class="text-muted">Used By 100,000+ Privacy-Conscious People</h5>
+          <div class="col-6">
+            <img src="{{S3_BUCKET}}/images/firewall.png" class="rounded d-block mx-auto mb-2" style="max-width: 100px">
+            <h3 class="font-weight-bold">Firewall</h3>
+            <h5 class="text-muted">Blocks Hidden Trackers</h5>
+            <p>The world's first on-device, open source blocker that stops ads, trackers, and badware in all your apps.</a> 
+            <a href="/about" class="d-block btn text-white btn-md py-2 m-1 mt-3 confirmed-blue-bg mx-auto font-weight-bold" style="width: 140px;">
+              Learn More
+            </a>
           </div>
-          <div class="col-md-6 col-lg-4 col-sm-12 mt-3">
-             <img src="{{S3_BUCKET}}/images/twitter1.jpg" class="rounded" style="max-width: 100%">
-          </div>
-          <div class="col-md-6 col-lg-4 col-sm-12 mt-3">
-             <img src="{{S3_BUCKET}}/images/twitter3.jpg" class="rounded" style="max-width: 100%">
-          </div>
-          <div class="col-md-6 col-lg-4 col-sm-12 mt-3">
-             <img src="{{S3_BUCKET}}/images/twitter2.jpg" class="rounded" style="max-width: 100%">
-          </div>
-          <div class="col-md-6 col-lg-6 col-sm-12 mt-3">
-             <img src="{{S3_BUCKET}}/images/twitter5.jpg" class="rounded" style="max-width: 100%">
-          </div>
-          <div class="col-md-6 col-lg-6 col-sm-12 mt-3">
-             <img src="{{S3_BUCKET}}/images/twitter4-new.jpg" class="rounded" style="max-width: 100%">
+          <div class="col-6">
+            <img src="{{S3_BUCKET}}/images/shield.png" class="rounded d-block mx-auto mb-2" style="max-width: 100px">
+            <h3 class="font-weight-bold">Secure Tunnel VPN</h3>
+            <h5 class="text-muted">Stops Browsing History Tracking</h5>
+            <p>The no-logs, blazing-fast, privacy-first VPN. The only VPN to <strong>prove</strong> its Privacy Policy and be fully audited.</a> 
+            <a href="/secure-tunnel" class="d-block btn text-white btn-md py-2 m-1 mt-3 confirmed-blue-bg mx-auto font-weight-bold" style="width: 140px;">
+              Learn More
+            </a>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid bg-light">
+    <div class="container mt-5 pb-5 pt-5">
+      <div class="row">
+        <div class="col-12 mb-3 mt-2 px-5">
+          <h3 class="font-weight-bold"><strong>Transparency You Can Trust</strong></h3>
+        </div>
+        <div class="col-lg-10 offset-lg-1 text-left">
+          There are many examples of privacy products that end up harming their users' privacy, and it's becoming more common over time. For example, a "privacy" app was found to be <a href="https://www.howtogeek.com/342731/dont-use-facebooks-onavo-vpn-its-designed-to-spy-on-you/" target="_blank">spying on its users to mine personal data</a>, another was <a href="https://www.extremetech.com/computing/206858-popular-chrome-vpn-extension-hola-at-center-of-massive-botnet-attack" target="_blank">stealing bandwidth for botnets</a>, and one was <a href="https://securitygladiators.com/hotspot-shield-and-cdt/" target="_blank">injecting ads into browsing</a>. Even the biggest "brand" name in privacy (who, ironically, buys millions of dollars in ads that track users), was <a href="https://techcrunch.com/2019/10/21/nordvpn-confirms-it-was-hacked/" target=_blank>hacked multiple times</a> and tried to cover it up for a year and a half.
+          <br/><br/>
+          The problem is lack of transparency. Who owns these companies? What happens to your data when you send it to them? Are they even based in a country that has any kind of consumer protection laws? And how do you ultimately know if they're telling the truth about anything?
+          <br/><br/>
+          We set out to fix this problem by creating a certification called <a href="https://www.theverge.com/2019/6/18/18682026/openly-operated-user-data-privacy-auditing-standard-announce">Openly Operated</a> that ensures every aspect of a product is 100% transparent, including code, infrastructure, privacy or security claims, and even company location and owners. All claims and information must also be backed by public proof that anyone can check, and verified by independent auditors. In short, Openly Operated is the gold standard for transparency and trust in apps.<br/><br/>
+          Lockdown's Firewall and Secure Tunnel are both Openly Operated. They're built from the ground up to provide full clarity into exactly what it does with user data, and more importantly, what it doesn't do with user data. We guarantee you won't see transparency like this in any other privacy product.<br/><br/>
+        </div>
+        <a href="https://openlyoperated.org/report/confirmedvpn" target="_blank" class="btn confirmed-blue-btn-lg mx-auto mt-0" style="width: 250px;">
+          View Full Audit Reports
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container mt-5 pb-5">
+    <div class="row">
+      <div class="col-12 mb-3 mt-2 px-5">
+        <h3 class="font-weight-bold"><strong>Over 1 Billion Trackers Blocked</strong></h3>
+        <h5 class="text-muted">Used By 100,000+ Privacy-Conscious People</h5>
+      </div>
+      <div class="col-md-6 col-lg-4 col-sm-12 mt-3">
+         <img src="{{S3_BUCKET}}/images/twitter1.jpg" class="rounded" style="max-width: 100%">
+      </div>
+      <div class="col-md-6 col-lg-4 col-sm-12 mt-3">
+         <img src="{{S3_BUCKET}}/images/twitter3.jpg" class="rounded" style="max-width: 100%">
+      </div>
+      <div class="col-md-6 col-lg-4 col-sm-12 mt-3">
+         <img src="{{S3_BUCKET}}/images/twitter2.jpg" class="rounded" style="max-width: 100%">
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-12 mt-3">
+         <img src="{{S3_BUCKET}}/images/twitter5.jpg" class="rounded" style="max-width: 100%">
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-12 mt-3">
+         <img src="{{S3_BUCKET}}/images/twitter4-new.jpg" class="rounded" style="max-width: 100%">
+      </div>
+    </div>
   </div>
   
   <div class="text-center bg-light jumbotron jumbotron-fluid text-dark mb-0">
