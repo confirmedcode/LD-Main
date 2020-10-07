@@ -6,7 +6,8 @@ const AppError = require("shared/error");
 const Logger = require("shared/logger");
 
 // Constants
-const DOMAIN = process.env.LD_DOMAIN;
+const OLD_DOMAIN = process.env.LD_DOMAIN;
+const DOMAIN = process.env.LD_NEW_DOMAIN;
 const NODE_ENV = process.env.NODE_ENV;
 const ENVIRONMENT = process.env.ENVIRONMENT;
 
@@ -51,8 +52,7 @@ app.set("view engine", ".hbs");
 app.locals.DOMAIN = DOMAIN;
 if (NODE_ENV === "production") {
   app.locals.S3_BUCKET = "https://lockdown-site-assets.s3.amazonaws.com";
-}
-else {
+} else {
   app.locals.S3_BUCKET = "/local-assets"
 }
 app.use(express.static("public"));
@@ -76,6 +76,12 @@ app.get(["/review/houseparty", "/houseparty"], (request, response, next) => {
 
 app.get(["/about", "/about.html"], (request, response, next) => {
   return response.render("about", {
+    trackerimage: app.locals.S3_BUCKET + "/images/tracker-diagram.png"
+  });
+});
+
+app.get(["/firewall", "/firewall.html"], (request, response, next) => {
+  return response.render("firewall", {
     trackerimage: app.locals.S3_BUCKET + "/images/tracker-diagram.png"
   });
 });
@@ -116,14 +122,12 @@ app.use((error, request, response, next) => {
   if (response.headersSent) {
     Logger.error("RESPONSE ALREADY SENT");
     return;
-  }
-  else if (error.statusCode >= 200 && error.statusCode < 500) {
+  } else if (error.statusCode >= 200 && error.statusCode < 500) {
     response.status(error.statusCode).json({
       code: error.appCode,
       message: error.message
     });
-  }
-  else {
+  } else {
     response.status(500).json({
       code: -1,
       message: "Unknown Internal Error"
