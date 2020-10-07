@@ -80,6 +80,12 @@ app.get(["/about", "/about.html"], (request, response, next) => {
   });
 });
 
+app.get(["/firewall", "/firewall.html"], (request, response, next) => {
+  return response.render("firewall", {
+    trackerimage: app.locals.S3_BUCKET + "/images/tracker-diagram.png"
+  });
+});
+
 app.get(["/faq", "/faq.html"], (request, response, next) => {
   return response.render("faq");
 });
