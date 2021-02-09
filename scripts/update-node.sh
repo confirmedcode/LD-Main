@@ -3,7 +3,7 @@
 set -x
 
 npm install -g n
-n 12
+n 10
 npm install -g npm
 
 # Install latest pm2

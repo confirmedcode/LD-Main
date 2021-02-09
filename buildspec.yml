@@ -2,8 +2,6 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 12
     commands:
       - echo Installing modules...
       - npm install --global mocha
