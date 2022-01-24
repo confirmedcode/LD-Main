@@ -36,6 +36,9 @@
             <a href="#app-report">
               &centerdot; Why does the App Privacy Report show Lockdown connecting to so many domains?
             </a><br />
+            <a href="#mail-network">
+              &centerdot; Why does Apple Mail fail to load some images with the message "Your network preferences prevent content from loading privately", and how do I resolve it?
+            </a><br />
             <h4 class="mt-3 pb-0 mb-2">
               App Related Questions
             </h4>
@@ -202,8 +205,7 @@
             Why does the App Privacy Report show Lockdown connecting to so many domains?
           </h4>
           <p>
-            In the "App Network Activity" section of the App Privacy Report (as of iOS/iPadOS 15.2), you may see
-            a large number of domains that are attributed to Lockdown. These domains are not requests that Lockdown itself is making - rather, these are domains that Lockdown has "whitelisted" in order for apps, websites, and your device to function properly. For example, apple.com domains are whitelisted so that your iPhone/iPad can successfully download and update iOS, and iCloud.com domains are whitelisted for the proper functioning of calendar and other built-in Apple apps.
+            In the "App Network Activity" section of the App Privacy Report (as of iOS/iPadOS 15.2), you may see a large number of domains that are attributed to Lockdown. These domains are not requests that Lockdown itself is making - rather, these are domains that Lockdown has "whitelisted" in order for apps, websites, and your device to function properly. For example, apple.com domains are whitelisted so that your iPhone/iPad can successfully download and update iOS, and iCloud.com domains are whitelisted for the proper functioning of calendar and other built-in Apple apps.
           </p>
           <p>
             Due to quirks about how iOS "blames" network connections, these whitelisted connections end up appearing as though the requests are coming from Lockdown. They are actually just Lockdown ensuring that these requests go through without being blocked.
@@ -211,6 +213,58 @@
           <p>
             You still have the option of blocking these domains, if you'd like. However, please be warned that this is very likely to break apps (especially system apps) on your iPhone, and cause other strange issues. To do so, simply open Lockdown, tap Whitelist, and tap to un-whitelist certain domains.
             <br><br><a href="#backtotop">Back to top.</a>
+          </p>
+        </div>
+        
+        <div class="pb-3 pt-5" id="mail-network">
+          <h4 class="mt-3 pb-0 mb-2">
+            Why does Apple Mail fail to load some images with the message "Your network preferences prevent content from loading privately", and how do I resolve it?
+          </h4>
+          <p>
+            In Apple's Mail app on both iOS 15+ and macOS 12+, Apple added a buggy (called "Mail Privacy Protection") which conflicts with Lockdown's privacy protections. We've reported this issue Apple, but in the meantime, the solution is simply to disable this redundant feature (Lockdown Firewall does tracker blocking, and Lockdown VPN hides your IP address). Here's how to do that:
+          </p>
+          <p>
+            To disable it on iOS/iPadOS:
+            <ol>
+              <li>
+                Open the Settings app.
+              </li>
+              <li>
+                Tap "Mail".
+              </li>
+              <li>
+                Tap "Privacy Protection".
+              </li>
+              <li>
+                Disable "Protect Mail Activity".
+              </li>
+              <li>
+                Disable "Hide IP Address".
+              </li>
+              <li>
+                You may need to force quit the Mail app for the settings to apply.
+              </li>
+            </ol>
+            To disable it on macOS:
+            <ol>
+              <li>
+                Open the Mail app.
+              </li>
+              <li>
+                On the menu, click "Mail" at the top left.
+              </li>
+              <li>
+                Click "Preferences".
+              </li>
+              <li>
+                Click the "Privacy" tab.
+              </li>
+              <li>
+                Uncheck all three options.
+              </li>
+            </ol>
+          
+            <br><a href="#backtotop">Back to top.</a>
           </p>
         </div>
 
