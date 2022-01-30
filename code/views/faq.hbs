@@ -205,11 +205,13 @@
             Why does the App Privacy Report show Lockdown connecting to so many domains?
           </h4>
           <p>
-            In the "App Network Activity" section of the App Privacy Report (as of iOS/iPadOS 15.2), you may see
-            a large number of domains that are attributed to Lockdown. These domains, like "test.example.com", are
-            actually attempted connections (by apps or websites) that Lockdown has blocked. When you enable Lockdown's
-            Firewall, all of an app's traffic goes through the Firewall on your device. This is why you see a domain
-            being contacted by Lockdown - because all of that traffic goes through Lockdown
+            In the "App Network Activity" section of the App Privacy Report (as of iOS/iPadOS 15.2):
+            <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/appreport1.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
+            You will see a large number of domains that are attributed to Lockdown. These domains, like "gateway.icloud.com" (shown below):
+            are actually attempted connections (by apps or websites) that Lockdown has blocked. <br><br>
+            <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/appreport2.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
+            When you enable Lockdown's Firewall, all of an app's traffic goes through the Firewall on your device.
+            This is why you see a domain being contacted by Lockdown - because all of that traffic goes through Lockdown
             first, before it reaches the internet. If you turn off Lockdown's Firewall, or whitelist a domain, you'll
             see those domains contacted by the apps themselves, as that traffic is no longer going through
             Lockdown's Firewall.
