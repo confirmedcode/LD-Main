@@ -36,6 +36,9 @@
             <a href="#app-report">
               &centerdot; Why does the App Privacy Report show Lockdown connecting to so many domains?
             </a><br />
+            <a href="#block-list-add">
+              &centerdot; How do I add a custom domain to Lockdown's Block List?
+            </a><br />
             <h4 class="mt-3 pb-0 mb-2">
               App Related Questions
             </h4>
@@ -136,8 +139,8 @@
             <li>
               Ensure that cellular data is turned <strong>ON</strong> for Lockdown. If you disable cellular data for
               Lockdown, it will be unable to process legitimate app requests and apps will appear to have no internet
-              connection, despite your device having a strong cellular connection. See more about cellular data in this
-              <a href="#anchor4">FAQ.</a>
+              connection, despite your device having a strong cellular connection. Learn more about cellular data and Lockdown in this
+              <a href="#cell-data">FAQ.</a>
             </li>
             <li>
               Ensure that Lockdown is up to date (<a href="https://support.apple.com/en-us/HT202180">how to update apps</a>),
@@ -211,6 +214,40 @@
             see those domains contacted by the apps themselves, as that traffic is no longer going through
             Lockdown's Firewall.
             <br><br><a href="#backtotop">Back to top.</a>
+          </p>
+        </div>
+
+
+        <div class="pb-3 pt-5" id="block-list-add">
+          <h4 class="mt-3 pb-0 mb-2">
+            How do I add a custom domain to Lockdown's Block List?
+          </h4>
+          <p>
+            1. Open Lockdown and click on "Block List" under Firewall:
+            <p></p>
+            <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock1.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
+            <p></p>
+            2. Click on "Custom" to add a new domain to the Block List:
+            <p></p>
+            <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock2.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
+            <p></p>
+            3. Type in the custom domain, and hit "done" on your keyboard:
+            <p></p>
+            <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock3.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
+            <p></p>
+            4. You should now see your custom domain in the list:
+            <p></p>
+            <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock4.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
+            <p></p>
+            5. Click "Save" in the top right corner of your screen to update the list:
+            <p></p>
+            <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock5.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
+            <p></p>
+            6. Wait for the Firewall to restart, and now the new domain you've just added is being blocked!
+            <p></p>
+            <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock6.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
+            <p></p>
+            <a href="#backtotop">Back to top.</a>
           </p>
         </div>
 
