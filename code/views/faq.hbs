@@ -39,6 +39,9 @@
             <a href="#block-list-add">
               &centerdot; How do I add a custom domain to Lockdown's Block List?
             </a><br />
+            <a href="#mail-network">
+              &centerdot; Why does Apple Mail fail to load some images with the message "Your network preferences prevent content from loading privately", and how do I resolve it?
+            </a><br />
             <h4 class="mt-3 pb-0 mb-2">
               App Related Questions
             </h4>
@@ -166,7 +169,7 @@
           <ol>
             <li>
               <strong>iOS miscalculates Lockdown's battery usage</strong> - Since Lockdown is always running in the
-              background to block requests, iOS thinks that apps that Lockdown's blocking activities are also part of Lockdown's
+              background to block requests, iOS thinks that apps (and app trackers) that Lockdown blocks are also part of Lockdown's
               battery usage. This is not accurate, and we have submitted a bug report to Apple for them to fix this.
             </li>
             <li>
@@ -250,6 +253,58 @@
             <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock6.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
             <p></p>
             <a href="#backtotop">Back to top.</a>
+          </p>
+        </div>
+
+        <div class="pb-3 pt-5" id="mail-network">
+          <h4 class="mt-3 pb-0 mb-2">
+            Why does Apple Mail fail to load some images with the message "Your network preferences prevent content from loading privately", and how do I resolve it?
+          </h4>
+          <p>
+            In Apple's Mail app on both iOS 15+ and macOS 12+, Apple added a buggy (called "Mail Privacy Protection") which conflicts with Lockdown's privacy protections. We've reported this issue Apple, but in the meantime, the solution is simply to disable this redundant feature (Lockdown Firewall does tracker blocking, and Lockdown VPN hides your IP address). Here's how to do that:
+          </p>
+          <p>
+            To disable it on iOS/iPadOS:
+            <ol>
+              <li>
+                Open the Settings app.
+              </li>
+              <li>
+                Tap "Mail".
+              </li>
+              <li>
+                Tap "Privacy Protection".
+              </li>
+              <li>
+                Disable "Protect Mail Activity".
+              </li>
+              <li>
+                Disable "Hide IP Address".
+              </li>
+              <li>
+                You may need to force quit the Mail app for the settings to apply.
+              </li>
+            </ol>
+            To disable it on macOS:
+            <ol>
+              <li>
+                Open the Mail app.
+              </li>
+              <li>
+                On the menu, click "Mail" at the top left.
+              </li>
+              <li>
+                Click "Preferences".
+              </li>
+              <li>
+                Click the "Privacy" tab.
+              </li>
+              <li>
+                Uncheck all three options.
+              </li>
+            </ol>
+
+            <br><a href="#backtotop">Back to top.</a>
           </p>
         </div>
 
