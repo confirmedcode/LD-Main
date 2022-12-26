@@ -7,8 +7,8 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-12">
-        <h3 class="text-center serif mb-4 pb-2 mt-0 pt-5"><strong>Frequently Asked Questions</strong></h3>
+      <div class="col-lg-10 offset-lg-1 text-left">
+        <h4 class="text-left serif mb-0 mt-0 pt-5"><strong>Frequently Asked Questions</strong></h4>
       </div>
     </div>
 
@@ -16,599 +16,605 @@
 
       <div class="col-lg-10 offset-lg-1 text-left">
 
-        <ul class="list-unstyled pb-0 pt-4">
-          <li class="pt-1">
-            <h4 class="mt-3 pb-0 mb-2">
+          <h5 class="my-3 pt-2 font-weight-bold">
               General Lockdown Questions
-            </h4>
-            <a href="#block-ads">
-              &centerdot; Lockdown used to block ads in a popular app I use, what gives?
-            </a><br />
-            <a href="#stop-block">
-              &centerdot; What do I do if Lockdown stops blocking trackers, it turns itself off, or my device's internet seems to not work?
-            </a><br />
-            <a href="#battery">
-              &centerdot; Does Lockdown impact battery and why does Lockdown show up in my Battery settings panel?
-            </a><br />
-            <a href="#cell-data">
-              &centerdot; Why does iOS show that Lockdown is using cellular data?
-            </a><br />
-            <a href="#app-report">
-              &centerdot; Why does the App Privacy Report show Lockdown connecting to so many domains?
-            </a><br />
-            <a href="#block-list-add">
-              &centerdot; How do I add a custom domain to Lockdown's Block List?
-            </a><br />
-            <a href="#mail-network">
-              &centerdot; Why does Apple Mail fail to load some images with the message: "Your network preferences prevent content from loading privately", and how do I resolve it?
-            </a><br />
-            <h4 class="mt-3 pb-0 mb-2">
+          </h5>
+
+          <div class="accordion" id="faq">
+              <div class="card-header border-0 my-2" id="block-ads">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq1"
+                     aria-expanded="false" aria-controls="faq1">
+                      Lockdown used to block ads in a popular app I use, what gives?
+                  </a>
+                  <div id="faq1" class="collapse" aria-labelledby="block-ads" data-parent="#faq">
+                      <hr />
+                      <p>
+                          We do try hard to block ads in popular apps, but marketing and ad companies are always changing hosting and serving of
+                          their ads to avoid ad blockers. It is sometimes the case that attempting ad blocking actually ends up blocking
+                          the content that Lockdown users actually want to see in their apps, so it is a balancing act. We haven't given up though -
+                          it's a work in progress and we are constantly working to improve our blocking. If you have any specific sites or apps
+                          in mind, please contact us at <a href="mailto:team@lockdownprivacy.com">team@lockdownprivacy.com</a><br />
+                      </p>
+                  </div>
+              </div>
+
+              <div class="card-header border-0 my-2" id="stop-block">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq2"
+                     aria-expanded="false" aria-controls="faq2">
+                      What do I do if Lockdown stops blocking trackers, it turns itself off, or my device's internet seems to not work?
+                  </a>
+                  <div id="faq2" class="collapse" aria-labelledby="stop-block" data-parent="#faq">
+                      <hr />
+                      <p>
+                          This is usually caused by either an issue with the device settings, or some conflicting app/software. Here's what
+                          to do:
+                      <ol>
+                          <li>
+                              Ensure that Background App Refresh is enabled in Settings for Lockdown. Lockdown needs this in order to
+                              refresh itself and stay active. See how to turn this on in Apple's documentation here: <a
+                                  href="https://support.apple.com/en-us/HT202070">https://support.apple.com/en-us/HT202070</a>.
+                          </li>
+                          <li>
+                              Ensure that Low Battery Mode is set to off. Sometimes iPhones and iPads become overly aggressive in
+                              stopping background apps like Lockdown when this mode is enabled. See how to get to this setting in
+                              Apple's documentation here: <a
+                                  href="https://support.apple.com/en-us/HT205234">https://support.apple.com/en-us/HT205234</a>.
+                          </li>
+                          <li>
+                              Ensure that no other security products or VPNs are interfering with Lockdown. Lockdown is incompatible
+                              with many third-party VPNs and/or security products. Here's how to turn those other conflicting apps off:
+                              <ol>
+                                  <li>Open Settings app</li>
+                                  <li>Tap VPN</li>
+                                  <li>If there are any entries that are NOT "Lockdown VPN" or "Lockdown Configuration", tap the "i" next
+                                      it</li>
+                                  <li>Turn "Connect On Demand" OFF for those entries (again, entries that are NOT Lockdown)</li>
+                                  <li>Open Lockdown again, and activate Firewall and Secure Tunnel</li>
+                              </ol>
+                          </li>
+                          <li>
+                              Ensure that cellular data is turned <strong>ON</strong> for Lockdown. If you disable cellular data for
+                              Lockdown, it will be unable to process legitimate app requests and apps will appear to have no internet
+                              connection, despite your device having a strong cellular connection. Learn more about cellular data and Lockdown in this
+                              <a href="#cell-data">FAQ.</a>
+                          </li>
+                          <li>
+                              Ensure that Lockdown is up to date (<a href="https://support.apple.com/en-us/HT202180">how to update apps</a>),
+                              and then update your iPhone, iPad, or Mac to the latest version available:
+                              <a href="https://support.apple.com/en-us/HT204204">update iOS or iPadOS</a>,
+                              <a href="https://support.apple.com/en-us/HT201541">update macOS</a>.
+                          </li>
+                      </ol>
+                      </p>
+                  </div>
+              </div>
+
+              <div class="card-header border-0 my-2" id="battery">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq3"
+                     aria-expanded="false" aria-controls="faq3">
+                      Does Lockdown impact battery and why does Lockdown show up in my Battery settings panel?
+                  </a>
+                  <div id="faq3" class="collapse" aria-labelledby="battery" data-parent="#faq">
+                      <hr />
+                      <p>
+                          We've performed numerous benchmarks in controlled settings to ensure that Lockdown does not impact a
+                          device's battery life. In some cases, Lockdown saves battery, because some apps spend so much energy
+                          contacting advertisement and tracking servers. Unfortunately, due to misinformation and issues with iOS, we
+                          sometimes get blamed for battery issues, so we'll explain how it all works here:
+                      </p>
+                      <ol>
+                          <li>
+                              <strong>iOS miscalculates Lockdown's battery usage</strong> - Since Lockdown is always running in the
+                              background to block requests, iOS thinks that apps (and app trackers) that Lockdown blocks are also part of Lockdown's
+                              battery usage. This is not accurate, and we have submitted a bug report to Apple for them to fix this.
+                          </li>
+                          <li>
+                              <strong>iOS updates cause battery drain</strong> - Apple has released a few different updates for iOS
+                              recently. Every time your iOS is updated (even a minor update), it does what is called a "re-index", which
+                              means it optimizes all your content for faster searching. This can cause high battery usage and last several
+                              days, and things return to normal a few days after the update. We do usually experience poor battery the first
+                              few days of a new iOS version, such as with the recent update to iOS 15.
+                          </li>
+                          <li>
+                              <strong>New iOS versions have battery bugs</strong> - Apple often plays it "fast and loose" with major iOS
+                              updates (like iOS 14 to iOS 15) because they need to coincide with hardware releases, so the early versions
+                              of these major updates sometimes have battery-draining bugs.
+                          </li>
+                      </ol>
+                  </div>
+              </div>
+
+              <div class="card-header border-0 my-2" id="cell-data">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq4"
+                     aria-expanded="false" aria-controls="faq4">
+                      Why does iOS show that Lockdown is using cellular data?
+                  </a>
+                  <div id="faq4" class="collapse" aria-labelledby="cell-data" data-parent="#faq">
+                      <hr />
+                      <p>
+                          The cellular data that is attributed to Lockdown is actually all your normal internet traffic. Lockdown's
+                          Firewall filters the traffic on your device, so that it can block the ads/malware/badware. This means all
+                          of your internet traffic goes through the Lockdown Firewall on your device (not to servers). This is why
+                          your iPhone reports this as data usage by Lockdown - because it's filtering everything first before it
+                          reaches the internet. If you turned off Lockdown you'll see data usage increase in the other apps you
+                          use, because it would no longer be going through Lockdown's Firewall filter.
+                      </p>
+                  </div>
+              </div>
+
+              <div class="card-header border-0 my-2" id="app-report">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq5"
+                     aria-expanded="false" aria-controls="faq5">
+                      Why does the App Privacy Report show Lockdown connecting to so many domains?
+                  </a>
+                  <div id="faq5" class="collapse" aria-labelledby="app-report" data-parent="#faq">
+                      <hr />
+                      <p>
+                          In the "App Network Activity" section of the App Privacy Report (as of iOS/iPadOS 15.2):
+                      <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/appreport1.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
+                      You will see a large number of domains that are attributed to Lockdown. These domains, like "gateway.icloud.com" (shown below):
+                      are actually attempted connections (by apps or websites) that Lockdown has blocked. <br><br>
+                      <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/appreport2.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
+                      When you enable Lockdown's Firewall, all of an app's traffic goes through the Firewall on your device.
+                      This is why you see a domain being contacted by Lockdown - because all of that traffic goes through Lockdown
+                      first, before it reaches the internet. If you turn off Lockdown's Firewall, or whitelist a domain, you'll
+                      see those domains contacted by the apps themselves, as that traffic is no longer going through
+                      Lockdown's Firewall.
+                      </p>
+                  </div>
+              </div>
+
+              <div class="card-header border-0 my-2" id="block-list-add">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq6"
+                     aria-expanded="false" aria-controls="faq6">
+                      How do I add a custom domain to Lockdown's Block List?
+                  </a>
+                  <div id="faq6" class="collapse" aria-labelledby="block-list-add" data-parent="#faq">
+                      <hr />
+                      <p>
+                          1. Open Lockdown and click on "Block List" under Firewall:
+                      <p></p>
+                      <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock1.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
+                      <p></p>
+                      2. Click on "Custom" to add a new domain to the Block List:
+                      <p></p>
+                      <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock2.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
+                      <p></p>
+                      3. Type in the custom domain, and hit "done" on your keyboard:
+                      <p></p>
+                      <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock3.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
+                      <p></p>
+                      4. You should now see your custom domain in the list:
+                      <p></p>
+                      <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock4.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
+                      <p></p>
+                      5. Click "Save" in the top right corner of your screen to update the list:
+                      <p></p>
+                      <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock5.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
+                      <p></p>
+                      6. Wait for the Firewall to restart, and now the new domain you've just added is being blocked!
+                      <p></p>
+                      <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock6.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
+                      </p>
+                  </div>
+              </div>
+
+              <div class="card-header border-0 my-2" id="mail-network">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq7"
+                     aria-expanded="false" aria-controls="faq7">
+                      Why does Apple Mail fail to load some images with the message: "Your network preferences prevent content from loading privately", and how do I resolve it?
+                  </a>
+                  <div id="faq7" class="collapse" aria-labelledby="mail-network" data-parent="#faq">
+                      <hr />
+                      <p>
+                          In Apple's Mail app, in both iOS 15+ and macOS 12+, there is a new feature called "Mail Privacy Protection". It appears that this feature
+                          conflicts with Lockdown's privacy protections, and we've reported this bug to Apple. Until there is a fix available, you can simply disable
+                          this redundant feature - as Lockdown Firewall already blocks trackers, and Lockdown VPN hides your IP address. Here's how to do that:
+                      </p>
+                      <p>
+                          To disable it on iOS/iPadOS:
+                      <ol>
+                          <li>
+                              Open the Settings app.
+                          </li>
+                          <li>
+                              Tap "Mail".
+                          </li>
+                          <li>
+                              Tap "Privacy Protection".
+                          </li>
+                          <li>
+                              Disable "Protect Mail Activity".
+                          </li>
+                          <li>
+                              Disable "Hide IP Address".
+                          </li>
+                          <li>
+                              You may need to force quit the Mail app for the settings to apply.
+                          </li>
+                      </ol>
+                      To disable it on macOS:
+                      <ol>
+                          <li>
+                              Open the Mail app.
+                          </li>
+                          <li>
+                              On the menu, click "Mail" at the top left.
+                          </li>
+                          <li>
+                              Click "Preferences".
+                          </li>
+                          <li>
+                              Click the "Privacy" tab.
+                          </li>
+                          <li>
+                              Uncheck all three options.
+                          </li>
+                      </ol>
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+          <h5 class="my-3 pt-2 font-weight-bold">
               App Related Questions
-            </h4>
-            <a href="#login-with-facebook">
-              &centerdot; I'm having issues logging into an app with Facebook (Messenger, WhatsApp, Instagram, etc.).
-              How do I fix this?
-            </a><br />
-            <a href="#whitelist">
-              &centerdot; I'm having trouble with a specific app or website. How do I whitelist it so it bypasses Lockdown?
-            </a><br />
-            <a href="#facebook-block">
-              &centerdot; Why do I see Facebook being blocked, even though I don't have Facebook installed?
-            </a><br />
-            <h4 class="mt-3 pb-0 mb-2">
+          </h5>
+
+          <div class="accordion" id="app">
+              <div class="card-header border-0 my-2" id="login-with-facebook">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#app1"
+                     aria-expanded="false" aria-controls="app1">
+                      I'm having issues logging into an app with Facebook (Messenger, WhatsApp, Instagram, etc.). How do I fix this?
+                  </a>
+                  <div id="app1" class="collapse" aria-labelledby="login-with-facebook" data-parent="#app">
+                      <hr />
+                      <p>
+                          Facebook tries very hard to ensure that you are in their tracking system whether you are using Facebook, Facebook Messenger,
+                          Instagram, WhatsApp or any other apps they own - as well as other apps that use their login or ad networks. Lockdown
+                          blocks these tracking attempts. Here's how to fix issues that you might see with Facebook's apps, or any other
+                          apps that use Facebook login or other features:
+                          <br />
+                      <ol>
+                          <li>
+                              Open Lockdown, and under Firewall, tap on "Block List".
+                          </li>
+                          <li>
+                              Try setting both "Facebook & WhatsApp" and "Facebook Trackers" to "not blocked" in the Block List. Be sure
+                              to tap "SAVE" at the top right, and let the Firewall re-activate before trying again.
+                          </li>
+                          <li>
+                              Try to log into the app with Facebook. Once you're logged into the app, you should be able to set 'Facebook Trackers'
+                              to "blocked" again. You might need to keep "Facebook & WhatsApp" set to "not blocked", depending upon the app.
+                          </li>
+                      </ol>
+                      </p>
+                  </div>
+              </div>
+
+              <div class="card-header border-0 my-2" id="whitelist">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#app2"
+                     aria-expanded="false" aria-controls="app2">
+                      I'm having trouble with a specific app or website. How do I whitelist it so it bypasses Lockdown?
+                  </a>
+                  <div id="app2" class="collapse" aria-labelledby="whitelist" data-parent="#app">
+                      <hr />
+                      <p>
+                          Here's how to whitelist an app or website:
+                      <ol>
+                          <li>
+                              Open Lockdown
+                          </li>
+                          <li>
+                              Tap "Whitelist"
+                          </li>
+                          <li>
+                              On iOS, tap the "domain-to-whitelist.com" field. Or if you're on macOS, under "Custom Domains",
+                              click the "New Domain" field.
+                          </li>
+                          <li>
+                              Enter the domain associated with the app or website you'd like to whitelist. For example,
+                              "yahoo.com" (without quotation marks) will whitelist the Yahoo website.
+                          </li>
+                          <li>
+                              On iOS, tap "Done", then "Save". On macOS, click "Add".
+                          </li>
+                          <li>
+                              Wait for the Firewall to re-activate (it will appear to turn off and back on again). If this doesn't happen, try it
+                              again and ensure that you hit "Done" and "Save" (or "Add" on Mac).
+                          </li>
+                          <li>
+                              The site or app you added now bypasses Lockdown Privacy's Firewall and Secure Tunnel. If you are uncertain what
+                              domain is associated with the app you're using, feel free to contact us at
+                              <a href="mailto:team@lockdownprivacy.com">team@lockdownprivacy.com</a> and we will help you out!
+                          </li>
+                      </ol>
+                      </p>
+                  </div>
+              </div>
+
+              <div class="card-header border-0 my-2" id="facebook-block">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#app3"
+                     aria-expanded="false" aria-controls="app3">
+                      Why do I see Facebook being blocked, even though I don't have Facebook installed?
+                  </a>
+                  <div id="app3" class="collapse" aria-labelledby="facebook-block" data-parent="#app">
+                      <hr />
+                      <p>
+                          Facebook's trackers are embedded in many (if not most) popular AppStore apps. This gives Facebook
+                          information about who you are, and what you do in apps - so that Facebook can serve you advertisements
+                          and other targeted content. So even if you don't have Facebook itself installed, their trackers still come
+                          bundled with many popular apps. Lockdown blocks these tracking attempts.
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+          <h5 class="my-3 pt-2 font-weight-bold">
               Account Questions
-            </h4>
-            <a href="#password-reset">
-              &centerdot; I forgot my password, how do I reset it?
-            </a><br />
-            <a href="#wrong-email">
-              &centerdot; I typed the wrong email during signup. How do I change it?
-            </a><br />
-            <a href="#vpn-settings">
-              &centerdot; In VPN settings I have "Lockdown Configuration" and "Lockdown VPN", what do these mean?
-            </a><br />
-            <a href="#confirm-email">
-              &centerdot; I'm not receiving the confirmation email.
-            </a><br />
-            <a href="#family-share">
-              &centerdot; If I subscribe to the Secure Tunnel, can I share this with my family?
-            </a><br />
-            <h4 class="mt-3 pb-0 mb-2">
+          </h5>
+
+          <div class="accordion" id="account">
+
+              <div class="card-header border-0 my-2" id="password-reset">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#account1"
+                     aria-expanded="false" aria-controls="account1">
+                      I forgot my password, how do I reset it?
+                  </a>
+                  <div id="account1" class="collapse" aria-labelledby="password-reset" data-parent="#account">
+                      <hr />
+                      <p>
+                          Here's how to reset your password:
+                      <ol>
+                          <li>
+                              Open Lockdown on iPhone or iPad
+                          </li>
+                          <li>
+                              Tap Account on bottom right
+                          </li>
+                          <li>
+                              Sign Out
+                          </li>
+                          <li>
+                              Tap Account on bottom right
+                          </li>
+                          <li>
+                              Sign In
+                          </li>
+                          <li>
+                              Forgot Password
+                          </li>
+                          <li>
+                              Open the Reset Password email on your iPhone or iPad. This could be in your spam box or take some time to
+                              arrive.
+                          </li>
+                          <li>
+                              Reset the password
+                          </li>
+                          <li>
+                              After successfully resetting your password, you need to sign out on all your other devices that have Lockdown
+                              installed, then sign in again, to avoid any issues.
+                          </li>
+                      </ol>
+                      </p>
+                  </div>
+              </div>
+
+              <div class="card-header border-0 my-2" id="wrong-email">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#account2"
+                     aria-expanded="false" aria-controls="account2">
+                      I typed the wrong email during signup. How do I change it?
+                  </a>
+                  <div id="account2" class="collapse" aria-labelledby="wrong-email" data-parent="#account">
+                      <hr />
+                      <p>
+                          Open Lockdown on iPhone or iPad. Tap Account on bottom right, then click "Sign Out", and click
+                          "Sign Out" again to confirm. Then tap Account again, and tap "Sign Up" to sign up with the correct
+                          email address.
+                      </p>
+                  </div>
+              </div>
+
+              <div class="card-header border-0 my-2" id="vpn-settings">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#account3"
+                     aria-expanded="false" aria-controls="account3">
+                      In VPN settings I have "Lockdown Configuration" and "Lockdown VPN", what do these mean?
+                  </a>
+                  <div id="account3" class="collapse" aria-labelledby="vpn-settings" data-parent="#account">
+                      <hr />
+                      <p>
+                          The "Lockdown Configuration" on your Mac or iPhone/iPad is what creates the localhost "127.0.0.1" which allows
+                          all of your app traffic to pass through Lockdown's block lists first. This is what enables the on-device
+                          blocking. The IP address "127.0.0.1" is a special reserved address called localhost that is only accessible on your device
+                          (iPhone, iPad, or Mac). "Lockdown VPN", also in network preferences (or VPN Settings), is the Secure Tunnel
+                          and this is what enables access to our VPN service, which we call Secure Tunnel, in the Lockdown app.
+                      </p>
+                  </div>
+              </div>
+
+              <div class="card-header border-0 my-2" id="confirm-email">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#account4"
+                     aria-expanded="false" aria-controls="account4">
+                      I'm not receiving the confirmation email.
+                  </a>
+                  <div id="account4" class="collapse" aria-labelledby="confirm-email" data-parent="#account">
+                      <hr />
+                      <ol>
+                          <li>
+                              Ensure your email is typed correctly. To do this: Open Lockdown, tap Account on bottom right, and ensure that
+                              the email address at the top where it says "Signed In As [Your Email Address]" matches your actual email address.
+                              If not, then tap "Sign Out" and tap "Sign Out" again to confirm.
+                          </li>
+                          <li>
+                              We have had reports of people's confirmation emails being marked as spam and have heard from a small number of people
+                              that it took extra time (a day or two) for it to arrive in their inbox. If you're using a desktop email
+                              client, be sure to check the spam box in your web interface too - sometimes users find that there is a
+                              separate spam filter on the online interface.
+                          </li>
+                          <li>
+                              As a last resort, try signing up again using a different email address. We are finding that for unknown reasons,
+                              some email providers are blocking our emails completely. There's nothing we can really do in that case. To
+                              do this, open Lockdown, tap Account on the bottom right. Then tap "Sign Out" (at the top), then tap "Sign
+                              Out" again to confirm.
+                          </li>
+                      </ol>
+                  </div>
+              </div>
+
+              <div class="card-header border-0 my-2" id="family-share">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#account5"
+                     aria-expanded="false" aria-controls="account5">
+                      If I subscribe to the Secure Tunnel, can I share this with my family?
+                  </a>
+                  <div id="account5" class="collapse" aria-labelledby="family-share" data-parent="#account">
+                      <hr />
+                      <p>
+                          <strong>Yes!</strong> To share the subscription with your family's devices, do the following:
+                          <br />
+                      <ol>
+                          <li>
+                              On your own device, subscribe to Secure Tunnel.
+                          </li>
+                          <li>
+                              On that same device, make sure you're logged into Lockdown with your email, by tapping the "Account" tab
+                              at the bottom. The screen should say "Signed In As [Your Email Address]". If it does not say that, then tap
+                              "Sign Up" to sign up and confirm your email address.
+                          </li>
+                          <li>
+                              On that same device, enable Secure Tunnel.
+                          </li>
+                          <li>
+                              On your family member's device, tap into the "Account" tab, then "Sign In". Sign in using the same
+                              Lockdown account (email and password) from step 2.
+                          </li>
+                          <li>
+                              On your family member's device, tap into the "Protect" tab, and activate Secure Tunnel. It should now
+                              work!
+                          </li>
+                      </ol>
+                      <br />
+                      If you have any issues with this, please contact us at <a
+                          href="mailto:team@lockdownprivacy.com">team@lockdownprivacy.com</a><br />
+                      </p>
+                  </div>
+              </div>
+
+          </div>
+
+          <h5 class="my-3 pt-2 font-weight-bold">
               Advanced Support
-            </h4>
-            <a href="#keychain">
-              &centerdot; During Mac setup, I'm seeing "NEIKEv2Provider wants to access key "privateKey" in your keychain". What do I do?
-            </a><br />
-            <a href="#uninstall">
-              &centerdot; How do I uninstall Lockdown Mac?
-            </a><br />
-            <a href="#confirmed-vpn">
-              &centerdot; What is Confirmed VPN and what does it have to do with Lockdown?
-            </a><br />
-            <a href="#other-platforms">
-              &centerdot; When will Lockdown be available on Android or Windows?
-            </a><br />
-            <a href="#not-listed">
-              &centerdot; I have a question not listed here.
-            </a>
-          </li>
-        </ul>
+          </h5>
+          <div class="accordion" id="support">
 
-        <div class="pb-3 pt-5" id="block-ads">
-          <h4 class="mt-3 pb-0 mb-2">
-            Lockdown used to block ads in a popular app I use, what gives?
-          </h4>
-          <p>
-            We do try hard to block ads in popular apps, but marketing and ad companies are always changing hosting and serving of
-            their ads to avoid ad blockers. It is sometimes the case that attempting ad blocking actually ends up blocking
-            the content that Lockdown users actually want to see in their apps, so it is a balancing act. We haven't given up though -
-            it's a work in progress and we are constantly working to improve our blocking. If you have any specific sites or apps
-            in mind, please contact us at <a href="mailto:team@lockdownprivacy.com">team@lockdownprivacy.com</a><br />
-            <br><a href="#backtotop">Back to top.</a>
-          </p>
-        </div>
+              <div class="card-header border-0 my-2" id="keychain">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#support1"
+                     aria-expanded="false" aria-controls="support1">
+                      During Mac setup, I'm seeing "NEIKEv2Provider wants to access key "privateKey" in your keychain". What do I do?
+                  </a>
+                  <div id="support1" class="collapse" aria-labelledby="keychain" data-parent="#support">
+                      <hr />
+                      <p>
+                          That dialog is part of the Lockdown Mac setup process. Enter your system password (the password you use to
+                          log into your computer) and click "Always Allow". This allows the setup to finish. You can then click the
+                          Lockdown icon on the menu bar (at the top of your Mac's display) to check that Lockdown is activated.
+                      </p>
+                  </div>
+              </div>
 
-        <div class="pb-3 pt-5" id="stop-block">
-          <h4 class="mt-3 pb-0 mb-2">
-            What do I do if Lockdown stops blocking trackers, it turns itself off, or my device's internet seems to not work?
-          </h4>
-          <p>
-            This is usually caused by either an issue with the device settings, or some conflicting app/software. Here's what
-            to do:
-          <ol>
-            <li>
-              Ensure that Background App Refresh is enabled in Settings for Lockdown. Lockdown needs this in order to
-              refresh itself and stay active. See how to turn this on in Apple's documentation here: <a
-                href="https://support.apple.com/en-us/HT202070">https://support.apple.com/en-us/HT202070</a>.
-            </li>
-            <li>
-              Ensure that Low Battery Mode is set to off. Sometimes iPhones and iPads become overly aggressive in
-              stopping background apps like Lockdown when this mode is enabled. See how to get to this setting in
-              Apple's documentation here: <a
-                href="https://support.apple.com/en-us/HT205234">https://support.apple.com/en-us/HT205234</a>.
-            </li>
-            <li>
-              Ensure that no other security products or VPNs are interfering with Lockdown. Lockdown is incompatible
-              with many third-party VPNs and/or security products. Here's how to turn those other conflicting apps off:
-              <ol>
-                <li>Open Settings app</li>
-                <li>Tap VPN</li>
-                <li>If there are any entries that are NOT "Lockdown VPN" or "Lockdown Configuration", tap the "i" next
-                  it</li>
-                <li>Turn "Connect On Demand" OFF for those entries (again, entries that are NOT Lockdown)</li>
-                <li>Open Lockdown again, and activate Firewall and Secure Tunnel</li>
-              </ol>
-            </li>
-            <li>
-              Ensure that cellular data is turned <strong>ON</strong> for Lockdown. If you disable cellular data for
-              Lockdown, it will be unable to process legitimate app requests and apps will appear to have no internet
-              connection, despite your device having a strong cellular connection. Learn more about cellular data and Lockdown in this
-              <a href="#cell-data">FAQ.</a>
-            </li>
-            <li>
-              Ensure that Lockdown is up to date (<a href="https://support.apple.com/en-us/HT202180">how to update apps</a>),
-              and then update your iPhone, iPad, or Mac to the latest version available:
-              <a href="https://support.apple.com/en-us/HT204204">update iOS or iPadOS</a>,
-              <a href="https://support.apple.com/en-us/HT201541">update macOS</a>.
-            </li>
-          </ol>
-          <br><a href="#backtotop">Back to top.</a>
-          </p>
-        </div>
+              <div class="card-header border-0 my-2" id="uninstall">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#support2"
+                     aria-expanded="false" aria-controls="support1">
+                      How do I uninstall Lockdown Mac?
+                  </a>
+                  <div id="support2" class="collapse" aria-labelledby="uninstall" data-parent="#support2">
+                      <hr />
+                      <p>
+                          Here's how to completely uninstall Lockdown on your Mac.
+                      <ol>
+                          <li>
+                              Click the Lockdown button in the top right menu bar on your Mac to open the popup (it's a picture of a
+                              lock)
+                          </li>
+                          <li>
+                              Click the menu (three stripes) button
+                          </li>
+                          <li>
+                              Click Quit. It will ask if you want to deactivate. Click yes.
+                          </li>
+                          <li>
+                              Click your Wifi icon in the menu bar
+                          </li>
+                          <li>
+                              Click "Network Preferences"
+                          </li>
+                          <li>
+                              On the left, select "Lockdown Configuration", then click the "-" minus icon (on the bottom left of this dialog box)
+                          </li>
+                          <li>
+                              On the left again, select "Lockdown VPN", then click the "-" minus icon again
+                          </li>
+                          <li>
+                              Click "Apply"
+                          </li>
+                          <li>
+                              Open your Applications folder
+                          </li>
+                          <li>
+                              Drag "Lockdown" into the Trash
+                          </li>
+                      </ol>
+                      </p>
+                  </div>
+              </div>
 
-        <div class="pb-3 pt-5" id="battery">
-          <h4 class="mt-3 pb-0 mb-2">
-            Does Lockdown impact battery and why does Lockdown show up in my Battery settings panel?
-          </h4>
-          <p>
-            We've performed numerous benchmarks in controlled settings to ensure that Lockdown does not impact a
-            device's battery life. In some cases, Lockdown saves battery, because some apps spend so much energy
-            contacting advertisement and tracking servers. Unfortunately, due to misinformation and issues with iOS, we
-            sometimes get blamed for battery issues, so we'll explain how it all works here:
-          </p>
-          <ol>
-            <li>
-              <strong>iOS miscalculates Lockdown's battery usage</strong> - Since Lockdown is always running in the
-              background to block requests, iOS thinks that apps (and app trackers) that Lockdown blocks are also part of Lockdown's
-              battery usage. This is not accurate, and we have submitted a bug report to Apple for them to fix this.
-            </li>
-            <li>
-              <strong>iOS updates cause battery drain</strong> - Apple has released a few different updates for iOS
-              recently. Every time your iOS is updated (even a minor update), it does what is called a "re-index", which
-              means it optimizes all your content for faster searching. This can cause high battery usage and last several
-              days, and things return to normal a few days after the update. We do usually experience poor battery the first
-              few days of a new iOS version, such as with the recent update to iOS 15.
-            </li>
-            <li>
-              <strong>New iOS versions have battery bugs</strong> - Apple often plays it "fast and loose" with major iOS
-              updates (like iOS 14 to iOS 15) because they need to coincide with hardware releases, so the early versions
-              of these major updates sometimes have battery-draining bugs.
-            </li>
-          </ol>
-          <br><a href="#backtotop">Back to top.</a>
-        </div>
+              <div class="card-header border-0 my-2" id="confirmed-vpn">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#support3"
+                     aria-expanded="false" aria-controls="support3">
+                      What is Confirmed VPN and what does it have to do with Lockdown?
+                  </a>
+                  <div id="support3" class="collapse" aria-labelledby="confirmed-vpn" data-parent="#support">
+                      <hr />
+                      <p>
+                          Confirmed VPN powers the Secure Tunnel VPN in Lockdown. It's the VPN service we built before we created
+                          Lockdown, and was also crucial for us to create the Openly Operated transparency certification. Lockdown provides
+                          both the Firewall and Secure Tunnel features, and Confirmed VPN is only the Secure Tunnel product. We
+                          recommend you use the Lockdown app to access both features.
+                      </p>
+                  </div>
+              </div>
 
-        <div class="pb-3 pt-5" id="cell-data">
-          <h4 class="mt-3 pb-0 mb-2">
-            Why does iOS show that Lockdown is using cellular data?
-          </h4>
-          <p>
-            The cellular data that is attributed to Lockdown is actually all your normal internet traffic. Lockdown's
-            Firewall filters the traffic on your device, so that it can block the ads/malware/badware. This means all
-            of your internet traffic goes through the Lockdown Firewall on your device (not to servers). This is why
-            your iPhone reports this as data usage by Lockdown - because it's filtering everything first before it
-            reaches the internet. If you turned off Lockdown you'll see data usage increase in the other apps you
-            use, because it would no longer be going through Lockdown's Firewall filter.
-            <br><br><a href="#backtotop">Back to top.</a>
-          </p>
-        </div>
+              <div class="card-header border-0 my-2" id="other-platforms">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#support4"
+                     aria-expanded="false" aria-controls="support4">
+                      When will Lockdown be available on Android or Windows?
+                  </a>
+                  <div id="support4" class="collapse" aria-labelledby="other-platforms" data-parent="#support">
+                      <hr />
+                      <p>
+                          We are planning to bring Lockdown to Android and Windows in the near future! Keep an eye on our <a
+                              href="https://lockdownprivacy.com">website</a> for more details!
+                      </p>
+                  </div>
+              </div>
 
-        <div class="pb-3 pt-5" id="app-report">
-          <h4 class="mt-3 pb-0 mb-2">
-            Why does the App Privacy Report show Lockdown connecting to so many domains?
-          </h4>
-          <p>
-            In the "App Network Activity" section of the App Privacy Report (as of iOS/iPadOS 15.2):
-            <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/appreport1.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
-            You will see a large number of domains that are attributed to Lockdown. These domains, like "gateway.icloud.com" (shown below):
-            are actually attempted connections (by apps or websites) that Lockdown has blocked. <br><br>
-            <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/appreport2.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
-            When you enable Lockdown's Firewall, all of an app's traffic goes through the Firewall on your device.
-            This is why you see a domain being contacted by Lockdown - because all of that traffic goes through Lockdown
-            first, before it reaches the internet. If you turn off Lockdown's Firewall, or whitelist a domain, you'll
-            see those domains contacted by the apps themselves, as that traffic is no longer going through
-            Lockdown's Firewall.
-            <br><br><a href="#backtotop">Back to top.</a>
-          </p>
-        </div>
+              <div class="card-header border-0 my-2" id="not-listed">
+                  <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#support5"
+                     aria-expanded="false" aria-controls="support5">
+                      I have a question not listed here.
+                  </a>
+                  <div id="support5" class="collapse" aria-labelledby="not-listed" data-parent="#support">
+                      <hr />
+                      <p>
+                          Please open Lockdown, tap Account on the bottom right, then tap "Email Support" and send us your question -
+                          that's our
+                          preferred method. If you're not able to do that, then email us at <a
+                              href="mailto:team@lockdownprivacy.com">team@lockdownprivacy.com</a>. We're happy to help,
+                          and we'll get back to you as soon as possible. Please note that it may take 1-2 business days for us to respond
+                          - thank you for your patience!
+                      </p>
+                  </div>
+              </div>
 
-
-        <div class="pb-3 pt-5" id="block-list-add">
-          <h4 class="mt-3 pb-0 mb-2">
-            How do I add a custom domain to Lockdown's Block List?
-          </h4>
-          <p>
-            1. Open Lockdown and click on "Block List" under Firewall:
-            <p></p>
-            <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock1.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
-            <p></p>
-            2. Click on "Custom" to add a new domain to the Block List:
-            <p></p>
-            <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock2.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
-            <p></p>
-            3. Type in the custom domain, and hit "done" on your keyboard:
-            <p></p>
-            <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock3.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
-            <p></p>
-            4. You should now see your custom domain in the list:
-            <p></p>
-            <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock4.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
-            <p></p>
-            5. Click "Save" in the top right corner of your screen to update the list:
-            <p></p>
-            <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock5.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
-            <p></p>
-            6. Wait for the Firewall to restart, and now the new domain you've just added is being blocked!
-            <p></p>
-            <p style="text-align:center;"><img src="{{S3_BUCKET}}/images/customblock6.png" style="border: 3px solid #555; width:100%; max-width: 500px; border-radius: 8px;"></p>
-            <p></p>
-            <a href="#backtotop">Back to top.</a>
-          </p>
-        </div>
-
-        <div class="pb-3 pt-5" id="mail-network">
-          <h4 class="mt-3 pb-0 mb-2">
-            Why does Apple Mail fail to load some images with the message: "Your network preferences prevent content from loading privately", and how do I resolve it?
-          </h4>
-          <p>
-            In Apple's Mail app, in both iOS 15+ and macOS 12+, there is a new feature called "Mail Privacy Protection". It appears that this feature
-            conflicts with Lockdown's privacy protections, and we've reported this bug to Apple. Until there is a fix available, you can simply disable
-            this redundant feature - as Lockdown Firewall already blocks trackers, and Lockdown VPN hides your IP address. Here's how to do that:
-          </p>
-          <p>
-            To disable it on iOS/iPadOS:
-            <ol>
-              <li>
-                Open the Settings app.
-              </li>
-              <li>
-                Tap "Mail".
-              </li>
-              <li>
-                Tap "Privacy Protection".
-              </li>
-              <li>
-                Disable "Protect Mail Activity".
-              </li>
-              <li>
-                Disable "Hide IP Address".
-              </li>
-              <li>
-                You may need to force quit the Mail app for the settings to apply.
-              </li>
-            </ol>
-            To disable it on macOS:
-            <ol>
-              <li>
-                Open the Mail app.
-              </li>
-              <li>
-                On the menu, click "Mail" at the top left.
-              </li>
-              <li>
-                Click "Preferences".
-              </li>
-              <li>
-                Click the "Privacy" tab.
-              </li>
-              <li>
-                Uncheck all three options.
-              </li>
-            </ol>
-
-            <br><a href="#backtotop">Back to top.</a>
-          </p>
-        </div>
-
-        <div class="pb-3 pt-5" id="login-with-facebook">
-          <h4 class="mt-3 pb-0 mb-2">
-            I'm having issues logging into an app with Facebook (Messenger, WhatsApp, Instagram, etc.). How do I fix this?
-          </h4>
-          <p>
-            Facebook tries very hard to ensure that you are in their tracking system whether you are using Facebook, Facebook Messenger,
-            Instagram, WhatsApp or any other apps they own - as well as other apps that use their login or ad networks. Lockdown
-            blocks these tracking attempts. Here's how to fix issues that you might see with Facebook's apps, or any other
-            apps that use Facebook login or other features:
-            <br />
-          <ol>
-            <li>
-              Open Lockdown, and under Firewall, tap on "Block List".
-            </li>
-            <li>
-              Try setting both "Facebook & WhatsApp" and "Facebook Trackers" to "not blocked" in the Block List. Be sure
-              to tap "SAVE" at the top right, and let the Firewall re-activate before trying again.
-            </li>
-            <li>
-              Try to log into the app with Facebook. Once you're logged into the app, you should be able to set 'Facebook Trackers'
-              to "blocked" again. You might need to keep "Facebook & WhatsApp" set to "not blocked", depending upon the app.
-            </li>
-          </ol>
-            <br><a href="#backtotop">Back to top.</a>
-          </p>
-        </div>
-
-        <div class="pb-3 pt-5" id="whitelist">
-          <h4 class="mt-3 pb-0 mb-2">
-            I'm having trouble with a specific app or website. How do I whitelist it so it bypasses Lockdown?
-          </h4>
-          <p>
-            Here's how to whitelist an app or website:
-          <ol>
-            <li>
-              Open Lockdown
-            </li>
-            <li>
-              Tap "Whitelist"
-            </li>
-            <li>
-              On iOS, tap the "domain-to-whitelist.com" field. Or if you're on macOS, under "Custom Domains",
-              click the "New Domain" field.
-            </li>
-            <li>
-              Enter the domain associated with the app or website you'd like to whitelist. For example,
-              "yahoo.com" (without quotation marks) will whitelist the Yahoo website.
-            </li>
-            <li>
-              On iOS, tap "Done", then "Save". On macOS, click "Add".
-            </li>
-            <li>
-              Wait for the Firewall to re-activate (it will appear to turn off and back on again). If this doesn't happen, try it
-              again and ensure that you hit "Done" and "Save" (or "Add" on Mac).
-            </li>
-            <li>
-              The site or app you added now bypasses Lockdown Privacy's Firewall and Secure Tunnel. If you are uncertain what
-              domain is associated with the app you're using, feel free to contact us at
-              <a href="mailto:team@lockdownprivacy.com">team@lockdownprivacy.com</a> and we will help you out!
-            </li>
-          </ol>
-          <br><a href="#backtotop">Back to top.</a>
-          </p>
-        </div>
-
-        <div class="pb-3 pt-5" id="facebook-block">
-          <h4 class="mt-3 pb-0 mb-2">
-            Why do I see Facebook being blocked, even though I don't have Facebook installed?
-          </h4>
-          <p>
-            Facebook's trackers are embedded in many (if not most) popular AppStore apps. This gives Facebook
-            information about who you are, and what you do in apps - so that Facebook can serve you advertisements
-            and other targeted content. So even if you don't have Facebook itself installed, their trackers still come
-            bundled with many popular apps. Lockdown blocks these tracking attempts.
-            <br><br><a href="#backtotop">Back to top.</a>
-          </p>
-        </div>
-
-        <div class="pb-3 pt-5" id="password-reset">
-          <h4 class="mt-3 pb-0 mb-2">
-            I forgot my password, how do I reset it?
-          </h4>
-          <p>
-            Here's how to reset your password:
-          <ol>
-            <li>
-              Open Lockdown on iPhone or iPad
-            </li>
-            <li>
-              Tap Account on bottom right
-            </li>
-            <li>
-              Sign Out
-            </li>
-            <li>
-              Tap Account on bottom right
-            </li>
-            <li>
-              Sign In
-            </li>
-            <li>
-              Forgot Password
-            </li>
-            <li>
-              Open the Reset Password email on your iPhone or iPad. This could be in your spam box or take some time to
-              arrive.
-            </li>
-            <li>
-              Reset the password
-            </li>
-            <li>
-              After successfully resetting your password, you need to sign out on all your other devices that have Lockdown
-              installed, then sign in again, to avoid any issues.
-            </li>
-          </ol>
-          <br><a href="#backtotop">Back to top.</a>
-        </p>
-        </div>
-
-        <div class="pb-3 pt-5" id="wrong-email">
-          <h4 class="mt-3 pb-0 mb-2">
-            I typed the wrong email during signup. How do I change it?
-          </h4>
-          <p>
-            Open Lockdown on iPhone or iPad. Tap Account on bottom right, then click "Sign Out", and click
-            "Sign Out" again to confirm. Then tap Account again, and tap "Sign Up" to sign up with the correct
-            email address.
-            <br><br><a href="#backtotop">Back to top.</a>
-          </p>
-        </div>
-
-        <div class="pb-3 pt-5" id="vpn-settings">
-          <h4 class="mt-3 pb-0 mb-2">
-            In VPN settings I have "Lockdown Configuration" and "Lockdown VPN", what do these mean?
-          </h4>
-          <p>
-            The "Lockdown Configuration" on your Mac or iPhone/iPad is what creates the localhost "127.0.0.1" which allows
-            all of your app traffic to pass through Lockdown's block lists first. This is what enables the on-device
-            blocking. The IP address "127.0.0.1" is a special reserved address called localhost that is only accessible on your device
-            (iPhone, iPad, or Mac). "Lockdown VPN", also in network preferences (or VPN Settings), is the Secure Tunnel
-            and this is what enables access to our VPN service, which we call Secure Tunnel, in the Lockdown app.
-            <br><br><a href="#backtotop">Back to top.</a>
-          </p>
-        </div>
-
-        <div class="pb-3 pt-5" id="confirm-email">
-          <h4 class="mt-3 pb-0 mb-2">
-            I'm not receiving the confirmation email.
-          </h4>
-          <ol>
-            <li>
-              Ensure your email is typed correctly. To do this: Open Lockdown, tap Account on bottom right, and ensure that
-              the email address at the top where it says "Signed In As [Your Email Address]" matches your actual email address.
-              If not, then tap "Sign Out" and tap "Sign Out" again to confirm.
-            </li>
-            <li>
-              We have had reports of people's confirmation emails being marked as spam and have heard from a small number of people
-              that it took extra time (a day or two) for it to arrive in their inbox. If you're using a desktop email
-              client, be sure to check the spam box in your web interface too - sometimes users find that there is a
-              separate spam filter on the online interface.
-            </li>
-            <li>
-              As a last resort, try signing up again using a different email address. We are finding that for unknown reasons,
-              some email providers are blocking our emails completely. There's nothing we can really do in that case. To
-              do this, open Lockdown, tap Account on the bottom right. Then tap "Sign Out" (at the top), then tap "Sign
-              Out" again to confirm.
-            </li>
-          </ol>
-            <a href="#backtotop">Back to top.</a>
-        </div>
-
-        <div class="pb-3 pt-5" id="family-share">
-          <h4 class="mt-3 pb-0 mb-2">
-            If I subscribe to the Secure Tunnel, can I share this with my family?
-          </h4>
-          <p>
-            <strong>Yes!</strong> To share the subscription with your family's devices, do the following:
-            <br />
-            <ol>
-              <li>
-                On your own device, subscribe to Secure Tunnel.
-              </li>
-              <li>
-                On that same device, make sure you're logged into Lockdown with your email, by tapping the "Account" tab
-                at the bottom. The screen should say "Signed In As [Your Email Address]". If it does not say that, then tap
-                "Sign Up" to sign up and confirm your email address.
-              </li>
-              <li>
-                On that same device, enable Secure Tunnel.
-              </li>
-              <li>
-                On your family member's device, tap into the "Account" tab, then "Sign In". Sign in using the same
-                Lockdown account (email and password) from step 2.
-              </li>
-              <li>
-                On your family member's device, tap into the "Protect" tab, and activate Secure Tunnel. It should now
-                work!
-              </li>
-            </ol>
-            <br />
-            If you have any issues with this, please contact us at <a
-              href="mailto:team@lockdownprivacy.com">team@lockdownprivacy.com</a><br />
-            <br><a href="#backtotop">Back to top.</a>
-          </p>
-        </div>
-
-        <div class="pb-3 pt-5" id="keychain">
-          <h4 class="mt-3 pb-0 mb-2">
-            During Mac setup, I'm seeing "NEIKEv2Provider wants to access key "privateKey" in your keychain". What do I do?
-          </h4>
-          <p>
-            That dialog is part of the Lockdown Mac setup process. Enter your system password (the password you use to
-            log into your computer) and click "Always Allow". This allows the setup to finish. You can then click the
-            Lockdown icon on the menu bar (at the top of your Mac's display) to check that Lockdown is activated.
-            <br><br><a href="#backtotop">Back to top.</a>
-          </p>
-        </div>
-
-        <div class="pb-3 pt-5" id="uninstall">
-          <h4 class="mt-3 pb-0 mb-2">
-            How do I uninstall Lockdown Mac?
-          </h4>
-          <p>
-            Here's how to completely uninstall Lockdown on your Mac.
-          <ol>
-            <li>
-              Click the Lockdown button in the top right menu bar on your Mac to open the popup (it's a picture of a
-              lock)
-            </li>
-            <li>
-              Click the menu (three stripes) button
-            </li>
-            <li>
-              Click Quit. It will ask if you want to deactivate. Click yes.
-            </li>
-            <li>
-              Click your Wifi icon in the menu bar
-            </li>
-            <li>
-              Click "Network Preferences"
-            </li>
-            <li>
-              On the left, select "Lockdown Configuration", then click the "-" minus icon (on the bottom left of this dialog box)
-            </li>
-            <li>
-              On the left again, select "Lockdown VPN", then click the "-" minus icon again
-            </li>
-            <li>
-              Click "Apply"
-            </li>
-            <li>
-              Open your Applications folder
-            </li>
-            <li>
-              Drag "Lockdown" into the Trash
-            </li>
-          </ol>
-          </p>
-          <a href="#backtotop">Back to top.</a>
-        </div>
-
-        <div class="pb-3 pt-5" id="confirmed-vpn">
-          <h4 class="mt-3 pb-0 mb-2">
-            What is Confirmed VPN and what does it have to do with Lockdown?
-          </h4>
-          <p>
-            Confirmed VPN powers the Secure Tunnel VPN in Lockdown. It's the VPN service we built before we created
-            Lockdown, and was also crucial for us to create the Openly Operated transparency certification. Lockdown provides
-            both the Firewall and Secure Tunnel features, and Confirmed VPN is only the Secure Tunnel product. We
-            recommend you use the Lockdown app to access both features.
-            <br><br><a href="#backtotop">Back to top.</a>
-          </p>
-        </div>
-
-        <div class="pb-3 pt-5" id="other-platforms">
-          <h4 class="mt-3 pb-0 mb-2">
-            When will Lockdown be available on Android or Windows?
-          </h4>
-          <p>
-            We are planning to bring Lockdown to Android and Windows in the near future! Keep an eye on our <a
-            href="https://lockdownprivacy.com">website</a> for more details!
-            <br><br><a href="#backtotop">Back to top.</a>
-          </p>
-        </div>
-
-        <div class="pb-3 pt-5" id="not-listed">
-          <h4 class="mt-3 pb-0 mb-2">
-            I have a question not listed here.
-          </h4>
-          <p>
-            Please open Lockdown, tap Account on the bottom right, then tap "Email Support" and send us your question -
-            that's our
-            preferred method. If you're not able to do that, then email us at <a
-              href="mailto:team@lockdownprivacy.com">team@lockdownprivacy.com</a>. We're happy to help,
-            and we'll get back to you as soon as possible. Please note that it may take 1-2 business days for us to respond
-            - thank you for your patience!
-            <br><br><a href="#backtotop">Back to top.</a>
-          </p>
-        </div>
+          </div>
 
       </div>
 
