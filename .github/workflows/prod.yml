@@ -1,9 +1,9 @@
-name: sync to dev codecommit
+name: sync to prod codecommit
 
 on:
   push:
     branches:
-      - master
+      - prod
 
 jobs:
   sync:
@@ -16,12 +16,12 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ vars.DEV_AWS_REGION }}
+          aws-access-key-id: ${{ secrets.PROD_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.PROD_AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ vars.PROD_AWS_REGION }}
       - name: Sync up to CodeCommit
         uses: hectorcoy/aws-codecommit-syncv2@master
         with:
-          repository_name: ${{ vars.DEV_REPO }}
-          aws_region: ${{ vars.DEV_AWS_REGION }}
+          repository_name: ${{ vars.PROD_REPO }}
+          aws_region: ${{ vars.PROD_AWS_REGION }}
           branch: master
