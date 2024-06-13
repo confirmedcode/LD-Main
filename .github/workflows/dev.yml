@@ -1,0 +1,24 @@
+name: sync to dev codecommit
+
+on: workflow_dispatch
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      - name: Sync up to CodeCommit
+        uses: afinkorea/sync-up-to-codecommit-action@v1
+        with:
+          repository_name: ${{ secrets.DEV_REPO }}
+          aws_region: ${{ secrets.DEV_AWS_REGION }}
+          branch: master
