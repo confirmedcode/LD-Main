@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Configure AWS Credentials
@@ -15,9 +15,9 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.DEV_AWS_REGION }}
+          aws-region: ${{ inputs.DEV_AWS_REGION }}
       - name: Sync up to CodeCommit
         uses: afinkorea/sync-up-to-codecommit-action@v1
         with:
-          repository_name: ${{ secrets.DEV_REPO }}
-          aws_region: ${{ secrets.DEV_AWS_REGION }}
+          repository_name: ${{ inputs.DEV_REPO }}
+          aws_region: ${{ inputs.DEV_AWS_REGION }}
