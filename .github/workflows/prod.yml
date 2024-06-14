@@ -1,0 +1,27 @@
+name: sync to prod codecommit
+
+on:
+  push:
+    branches:
+      - prod
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.PROD_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.PROD_AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ vars.PROD_AWS_REGION }}
+      - name: Sync up to CodeCommit
+        uses: hectorcoy/aws-codecommit-syncv2@master
+        with:
+          repository_name: ${{ vars.PROD_REPO }}
+          aws_region: ${{ vars.PROD_AWS_REGION }}
+          branch: master
