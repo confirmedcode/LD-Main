@@ -24,4 +24,4 @@ jobs:
         with:
           repository_name: ${{ vars.PROD_REPO }}
           aws_region: ${{ vars.PROD_AWS_REGION }}
-          branch: master
+          branch: prod
